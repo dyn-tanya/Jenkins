@@ -10,7 +10,7 @@
     "mochawesome:generate": "npx marge mochawesome.json",
     "cy:testWithAllureReport": "npx cypress run --env allure=true",
     "allure:clearData": "rm -rf allure-report allure-results",
-    "allue:generateReport": "npx allure generate"
+    "allure:generateReport": "npx allure generate"
   },
   "author": "",
   "license": "ISC",
