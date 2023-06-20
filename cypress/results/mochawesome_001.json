@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 2,
+    "failures": -1,
+    "start": "2023-06-15T18:20:49.342Z",
+    "end": "2023-06-15T18:20:49.599Z",
+    "duration": 257,
+    "testsRegistered": 2,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef47a9a7-618d-4470-a794-ffbc567f075a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\autorization-registration.cy.js",
+      "file": "cypress\\e2e\\autorization-registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "640220fe-2fa1-461f-83d5-e0bdeca01147",
+          "title": "Registration and Autorization",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Registration",
+              "fullTitle": "Registration and Autorization Registration",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.get('[title=\"Continue\"]').click();\ncy.get('.lock-on-click').click();\ncy.contains('First Name must be between 1 and 32 characters!').should('be.visible');\ncy.get('#AccountFrm_firstname').type('Tanya', {\n  delay: 50\n});\ncy.get('.lock-on-click').click();\ncy.contains('Last Name must be between 1 and 32 characters!').should('be.visible');\ncy.get('#AccountFrm_lastname').type('Dyn', {\n  delay: 50\n});\ncy.get('.lock-on-click').click();\ncy.contains('Email Address does not appear to be valid!').should('be.visible');\ncy.get('#AccountFrm_email').type('tanya.dynn114@gmail.com', {\n  delay: 50\n});\ncy.get('#AccountFrm_telephone').type('380688944837');\ncy.get('#AccountFrm_fax').type('(044)-247-40-18');\ncy.get('#AccountFrm_company').type('Everest Media');\ncy.get('.lock-on-click').click();\ncy.contains('Address 1 must be between 3 and 128 characters!').should('be.visible');\ncy.get('#AccountFrm_address_1').type('St.Robert, 236', {\n  delay: 50\n});\ncy.get('#AccountFrm_address_2').type('Vernadskogo, 13');\ncy.get('.lock-on-click').click();\ncy.contains('City must be between 3 and 128 characters!').should('be.visible');\ncy.get('#AccountFrm_city').type('Pavlograd', {\n  delay: 50\n});\ncy.get('.lock-on-click').click();\ncy.contains('Zip/postal code must be between 3 and 10 characters!').should('be.visible');\ncy.get('#AccountFrm_postcode').type('20515346', {\n  delay: 50\n});\ncy.get('#AccountFrm_country_id').select('Ukraine');\ncy.get('.lock-on-click').click();\ncy.contains('Please select a region / state!').should('be.visible');\ncy.get('#AccountFrm_zone_id').select('Dnipro');\ncy.get('.lock-on-click').click();\ncy.contains('Login name must be alphanumeric only and between 5 and 64 characters!').should('be.visible');\ncy.get('#AccountFrm_loginname').type('dyntanyaa114', {\n  delay: 50\n});\ncy.get('.lock-on-click').click();\ncy.contains('Password must be between 4 and 20 characters!').should('be.visible');\ncy.get('#AccountFrm_password').type('qwerty124');\ncy.get('.lock-on-click').click();\ncy.contains('Password confirmation does not match password!').should('be.visible');\ncy.contains('Error: You must agree to the Privacy Policy!').should('be.visible');\ncy.get('#AccountFrm_newsletter1').check('1');\ncy.get('#AccountFrm_agree').check('1');\ncy.get('#AccountFrm_password').type('qwerty54', {\n  delay: 50\n});\ncy.get('#AccountFrm_confirm').type('qwerty54', {\n  delay: 50\n});\ncy.get('.lock-on-click').click();\ncy.get('.maintext').should('contain', 'Your Account Has Been Created!');",
+              "err": {},
+              "uuid": "923c0a6a-64c2-45bc-a4f9-e05e63a76bfe",
+              "parentUUID": "640220fe-2fa1-461f-83d5-e0bdeca01147",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Autorization",
+              "fullTitle": "Registration and Autorization Autorization",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.get('#loginFrm_loginname').type('dyntanyaa14');\ncy.get('#loginFrm_password').type('qwerty54');\ncy.get('[title=\"Login\"]').click();\ncy.get('.heading1').should('contain', ' My Account');",
+              "err": {},
+              "uuid": "feaffb5a-4efa-49be-9825-8cd30257fb9b",
+              "parentUUID": "640220fe-2fa1-461f-83d5-e0bdeca01147",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "923c0a6a-64c2-45bc-a4f9-e05e63a76bfe",
+            "feaffb5a-4efa-49be-9825-8cd30257fb9b"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-06-15T18:21:19.721Z",
+    "end": "2023-06-15T18:21:36.039Z",
+    "duration": 16318,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6540d5b8-4774-4e7e-9675-7878d172ae93",
+      "title": "",
+      "fullFile": "cypress\\e2e\\registration.cy.js",
+      "file": "cypress\\e2e\\registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Registration",
+          "fullTitle": "Registration",
+          "timedOut": null,
+          "duration": 15917,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('/');\ncy.get('.topnavbar [data-id=\"menu_account\"]').click();\ncy.get('#accountFrm button').click();\ncy.get('#AccountFrm_firstname').type(_user.default.firstName);\ncy.get('#AccountFrm_lastname').type(_user.default.lastName);\ncy.get('#AccountFrm_email').type(_user.default.email);\ncy.get('#AccountFrm_address_1').type(_user.default.address);\ncy.get('#AccountFrm_city').type(_user.default.city);\ncy.get('#AccountFrm_postcode').type(_user.default.postCode);\ncy.get('#AccountFrm_country_id').select(_user.default.countryId);\ncy.get('#AccountFrm_loginname').type(_user.default.username);\ncy.get('#AccountFrm_password').type(_user.default.password);\ncy.get('#AccountFrm_confirm').type(_user.default.password);\ncy.get('#AccountFrm_zone_id').select(_user.default.zone);\ncy.get('#AccountFrm_newsletter0').check();\ncy.get('#AccountFrm_agree').check();\ncy.get('button[title=\"Continue\"]').click();\ncy.get('#maincontainer').contains(_user.default.firstName).should('exist');\ncy.clearAllCookies();\n(0, _helper.login)(_user.default);\n// cy.login(user);",
+          "err": {},
+          "uuid": "db4841d0-b532-4a4a-9589-b5d394bf0f59",
+          "parentUUID": "6540d5b8-4774-4e7e-9675-7878d172ae93",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 0,
+          "state": "pending",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": true,
+          "context": null,
+          "code": "cy.log('Open website login page');\ncy.visit('/index.php?rt=account/login');\ncy.log('Check user is unauthorized');\ncy.getCookie('customer').should('be.null');\ncy.log('Authorize user');\ncy.get('#loginFrm_loginname').type(_user.default.username);\ncy.get('#loginFrm_password').type(_user.default.password);\ncy.get('button[type=\"submit\"]').contains('Login').click();",
+          "err": {},
+          "uuid": "470f0466-4152-4807-994b-f4d0db9dad3b",
+          "parentUUID": "6540d5b8-4774-4e7e-9675-7878d172ae93",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "db4841d0-b532-4a4a-9589-b5d394bf0f59"
+      ],
+      "failures": [],
+      "pending": [
+        "470f0466-4152-4807-994b-f4d0db9dad3b"
+      ],
+      "skipped": [],
+      "duration": 15917,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
